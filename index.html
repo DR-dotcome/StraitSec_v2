@@ -605,16 +605,31 @@
             </p>
         </div>
         <div class="contact-form">
-            <form id="simpleForm">
-                <div class="form-group">
-                    <input type="text" name="Name" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="Email" placeholder="Email address" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="Phone" placeholder="Phone / WhatsApp">
-                </div>
+            <div class="contact-form">
+  <form name="contact" method="POST" data-netlify="true">
+    
+    <!-- ضروري باش Netlify يتعرف على الفورم -->
+    <input type="hidden" name="form-name" value="contact" />
+
+    <div class="form-group">
+      <input type="text" name="Name" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="Email" placeholder="Email address" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="Phone" placeholder="Phone / WhatsApp">
+    </div>
+
+    <div class="form-group">
+      <textarea name="Message" placeholder="Your message"></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
                 <div class="form-group">
                     <textarea name="Description" rows="4" placeholder="Tell us about your project... (CCTV, wifi, etc.)"></textarea>
                 </div>
