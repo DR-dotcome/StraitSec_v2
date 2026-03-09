@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        
         /* style.css – reset, variables, base */
         * {
             margin: 0;
@@ -36,6 +37,41 @@
             margin: 0 auto;
             padding: 3rem 0;
         }
+        
+        .premium-form-box{
+    position: relative;
+    background: #0d1a2d;
+    border-radius: 28px;
+    padding: 2.5rem;
+    border: 1px solid #2f5590;
+    max-width: 420px;
+}
+
+/* frame right */
+.premium-form-box::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 120px;
+    height: 120px;
+    border-top: 3px solid #3f9eff;
+    border-right: 3px solid #3f9eff;
+    border-radius: 0 20px 0 0;
+}
+
+/* frame bottom right */
+.premium-form-box::before{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 120px;
+    height: 120px;
+    border-bottom: 3px solid #3f9eff;
+    border-right: 3px solid #3f9eff;
+    border-radius: 0 0 20px 0;
+}
 
         /* gradients & glows */
         .glow-text {
@@ -418,6 +454,7 @@
     </style>
 </head>
 <body>
+    
     <!-- navigation -->
     <nav class="navbar">
         <div class="logo">StraitSec<span>.</span></div>
@@ -587,7 +624,7 @@
         </div>
 
 <!-- CONTACT section with Google Form Embed -->
-<div class="container" id="contact">
+<div class="container" id="contact1">
     <h2 class="section-title">Let's secure your business</h2>
     <div class="contact-row">
         <!-- Contact Info (WhatsApp + Email) -->
@@ -602,11 +639,12 @@
                 <i class="far fa-envelope" style="margin-right: 12px; color: #6aa9ff;"></i> zellalachraf65@gmail.com
             </div>
             <p style="margin-top: 2rem; font-size: 0.95rem; background: #0b1830; padding: 1.2rem; border-radius: 24px;">
-                <i class="fas fa-clock"></i> Mon–Sat, 8am – 8pm<br> onsite visits by appointment
+                <i class="fas fa-clock"></i> Mon–Sat, 09:am – 17:00pm<br> onsite visits by appointment
             </p>
         </div>
 
    <!-- CONTACT section - Premium Box on the Right -->
+    
         <div class="container" id="contact">
             <div style="display: flex; justify-content: flex-end; margin-bottom: 2rem;">
                 <h2 class="section-title" style="margin-bottom:0;">Let's secure your business</h2>
@@ -696,5 +734,37 @@
             });
         })();
     </script>
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/212628893215" 
+   class="whatsapp-float" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px; /* بدلها left إلا بغيتيها فاليسار */
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+z-index:999;
+text-decoration:none;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+</style>
 </body>
 </html>
